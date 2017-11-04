@@ -9,7 +9,8 @@
         p.text {{ page.text }}
         .options(v-if='page.options')
           el-button.option(
-            v-for='option in page.options'
+            v-for='(option, optionIndex) in page.options'
+            v-bind:key='page.key + optionIndex'
             v-on:click='handleOptionClick(pageIndex, option)'
           )
             | {{ option.text }}
@@ -57,12 +58,15 @@ export default {
 <style lang="sass" scoped>
 .adventure
   margin: 0 auto
+  position: relative
   width: 600px
 
 .page
   background-color: var(--color-lightest)
+  box-sizing: border-box
   margin: 10px 0
   padding: 10px 20px
+  width: 100%
   .text
     margin: 10px 0
     text-align: left

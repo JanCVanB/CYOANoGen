@@ -113,7 +113,7 @@ html, body, #app
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   overflow-y: scroll
-  padding: 60px
+  padding: 60px 60px 120px 60px
   text-align: center
   & > h2
     margin-top: 0
@@ -121,10 +121,15 @@ html, body, #app
 h1, h2, h3, h4, h5, h6
   font-weight: normal
 
+.slide-fade-item
+  display: inline-block
+  transition: all 2s ease
+
 .slide-fade-enter-active
   transition: all 2s ease
 
 .slide-fade-leave-active
+  position: absolute
   transition: all 2s ease
 
 .slide-fade-enter, .slide-fade-leave-to
