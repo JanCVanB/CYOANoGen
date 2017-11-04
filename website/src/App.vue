@@ -58,7 +58,13 @@ html, body, #app
   width: 100%
 
 #app
+  --color-dark: #073642
+  --color-darkest: #002b36
+  --color-light: #eee8d5
+  --color-lightest: #fdf6e3
+  background-color: var(--color-light)
   box-sizing: border-box
+  color: var(--color-darkest)
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -81,6 +87,8 @@ h1, h2, h3, h4, h5, h6
 </style>
 
 <style lang="sass" scoped>
-  .new-adventure
+  .new-adventure,
+  .new-adventure:hover
+    background-color: transparent
     margin: 20px 0
 </style>

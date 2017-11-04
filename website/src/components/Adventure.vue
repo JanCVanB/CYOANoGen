@@ -8,8 +8,8 @@
       )
         p.text Once upon a time, there was a skeleton who was both spooky and scary.
         .options
-          el-button.option-1(v-on:click='addPage') Do a spooky thing
-          el-button.option-2(v-on:click='addPage') Do a scary thing
+          el-button.option(v-on:click='addPage') Do a spooky thing
+          el-button.option(v-on:click='addPage') Do a scary thing
 </template>
 
 <script>
@@ -56,6 +56,7 @@ export default {
   width: 500px
 
 .page
+  background-color: var(--color-lightest)
   margin: 10px 0
   .text
     margin: 20px 20px 40px 20px
@@ -79,7 +80,8 @@ export default {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    & *
+    & .option
+      background-color: transparent
       -webkit-order: 1
       -ms-flex-order: 1
       order: 1
