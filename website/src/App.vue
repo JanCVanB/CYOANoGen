@@ -1,6 +1,8 @@
 <template lang="pug">
   #app
     h2 Choose Your Own Adventure novel generator
+    p
+      a(href='https://github.com/JanCVanB/CYOANoGen') Check out the source code on GitHub
     el-button.new-adventure(
       v-bind:disabled='!!adventure'
       v-on:click='adventure = onlyAdventureOption'
@@ -71,6 +73,8 @@ html, body, #app
   overflow-y: scroll
   padding: 60px
   text-align: center
+  & > h2
+    margin-top: 0
 
 h1, h2, h3, h4, h5, h6
   font-weight: normal

@@ -58,8 +58,9 @@ export default {
 .page
   background-color: var(--color-lightest)
   margin: 10px 0
+  padding: 10px 20px
   .text
-    margin: 20px 20px 40px 20px
+    margin: 10px 0 40px 0
     text-align: left
   .options
     display: -ms-flexbox;
