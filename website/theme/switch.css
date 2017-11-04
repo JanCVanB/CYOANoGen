@@ -86,6 +86,8 @@
   --------------------------*/
     /* Collapse
   --------------------------*/
+    /* Transfer
+  --------------------------*/
 }
 
 .el-switch{
@@ -114,9 +116,9 @@
     color: rgb(251, 253, 255) !important
 }
 
-.el-switch.is-disabled .el-switch__input:checked + .el-switch__core{
-    border-color: rgb(228, 232, 241);
-    background-color: rgb(228, 232, 241);
+.el-switch.is-checked .el-switch__core{
+    border-color: #20a0ff;
+    background-color: #20a0ff;
 }
 
 .el-switch.is-disabled{}
@@ -128,7 +130,6 @@
 .el-switch__label{
     transition: .2s;
     position: absolute;
-    z-index: 10;
     width: 46px;
     height: 22px;
     left: 0;
@@ -136,10 +137,7 @@
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none
+    z-index: 2
 }
 
 .el-switch__label *{
@@ -163,9 +161,19 @@
     display: none
 }
 
-.el-switch__input:checked + .el-switch__core{
-    border-color: #20a0ff;
-    background-color: #20a0ff
+.el-switch__input.allow-focus{
+    z-index: 0;
+    display: inline;
+    display: initial;
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: none;
+    opacity: 0
+}
+
+.el-switch__input.allow-focus:focus + .el-switch__core{
+    box-shadow: 0 0 2px #20a0ff
 }
 
 .el-switch__core{
@@ -180,7 +188,8 @@
     box-sizing: border-box;
     background: rgb(191, 203, 217);
     cursor: pointer;
-    transition: border-color .3s, background-color .3s
+    transition: border-color .3s, background-color .3s;
+    z-index: 1
 }
 
 .el-switch__core .el-switch__button{
@@ -191,7 +200,6 @@
     transition: transform .3s;
     width: 16px;
     height: 16px;
-    z-index: 20;
     background-color: #fff
 }
 
@@ -203,4 +211,92 @@
 
 .el-switch--wide .el-switch__label.el-switch__label--right span{
     right: 10px
+}
+:root{
+    /* Transition
+  -------------------------- */
+    /* Colors
+  -------------------------- */
+    /* Link
+  -------------------------- */
+    /* Border
+  -------------------------- */
+    /* Box-shadow
+  -------------------------- */
+    /* Fill
+  -------------------------- */
+    /* Font
+  -------------------------- */
+    /* Size
+  -------------------------- */
+    /* z-index
+  -------------------------- */
+    /* Disable base
+  -------------------------- */
+    /* Icon
+  -------------------------- */
+    /* Checkbox
+  -------------------------- */
+    /* Radio
+  -------------------------- */
+    /* Select
+  -------------------------- */
+    /* Alert
+  -------------------------- */
+    /* Message Box
+  -------------------------- */
+    /* Message
+  -------------------------- */
+    /* Notification
+  -------------------------- */
+    /* Input
+  -------------------------- */
+    /* Cascader
+  -------------------------- */
+    /* Group
+  -------------------------- */
+    /* Tab
+  -------------------------- */
+    /* Button
+  -------------------------- */
+    /* cascader
+  -------------------------- */
+    /* Switch
+ -------------------------- */
+    /* Dialog
+ -------------------------- */
+    /* Table
+ -------------------------- */
+    /* Pagination
+ -------------------------- */
+    /* Popover
+ -------------------------- */
+    /* Tooltip
+  -------------------------- */
+    /* Tag
+  -------------------------- */
+    /* Dropdown
+  -------------------------- */
+    /* Badge
+  -------------------------- */
+    /* Card
+  --------------------------*/
+    /* Slider
+  --------------------------*/
+    /* Steps
+  --------------------------*/
+    /* Menu
+  --------------------------*/
+    /* Rate
+  --------------------------*/
+    /* DatePicker
+  --------------------------*/
+    /* Loading
+  --------------------------*/
+    /* Scrollbar
+  --------------------------*/
+    /* Carousel
+  --------------------------*/
+    /* Collapse
+  --------------------------*/
 }

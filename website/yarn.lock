@@ -1898,7 +1898,7 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.27:
   version "1.3.27"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.27.tgz#78ecb8a399066187bb374eede35d9c70565a803d"
 
-element-theme-default@^1.0.2:
+element-theme-default@^1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/element-theme-default/-/element-theme-default-1.4.9.tgz#3e91de8b065ba7ec7b9049cd93fa971b3dd38a94"
 
@@ -1916,7 +1916,7 @@ element-theme@^0.7.2:
     run-sequence "^1.2.2"
     through2 "^2.0.3"
 
-element-ui@^1.0.2:
+element-ui@^1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-1.4.9.tgz#1b669a2efaa4918ed29350695bfe7d1890fd0958"
   dependencies:

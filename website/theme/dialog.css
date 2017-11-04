@@ -86,6 +86,8 @@
   --------------------------*/
     /* Collapse
   --------------------------*/
+    /* Transfer
+  --------------------------*/
 }
 .v-modal-enter{
     animation: v-modal-in .2s ease;
@@ -160,12 +162,30 @@
     padding: 20px 20px 0;
 }
 
-.el-dialog__close{
+.el-dialog__header:before, .el-dialog__header:after{
+    display: table;
+    content: "";
+}
+
+.el-dialog__header:after{
+    clear: both;
+}
+
+.el-dialog__headerbtn{
+    float: right;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.el-dialog__headerbtn .el-dialog__close {
     color: rgb(191, 203, 217);
 }
 
-.el-dialog__close:hover{
+.el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close{
     color: #20a0ff;
 }
 
@@ -180,10 +200,6 @@
     padding: 30px 20px;
     color: rgb(72, 87, 106);
     font-size: 14px;
-}
-
-.el-dialog__headerbtn{
-    float: right;
 }
 
 .el-dialog__footer{
@@ -220,4 +236,92 @@
         transform: translate3d(0, -20px, 0);
         opacity: 0;
     }
+}
+:root{
+    /* Transition
+  -------------------------- */
+    /* Colors
+  -------------------------- */
+    /* Link
+  -------------------------- */
+    /* Border
+  -------------------------- */
+    /* Box-shadow
+  -------------------------- */
+    /* Fill
+  -------------------------- */
+    /* Font
+  -------------------------- */
+    /* Size
+  -------------------------- */
+    /* z-index
+  -------------------------- */
+    /* Disable base
+  -------------------------- */
+    /* Icon
+  -------------------------- */
+    /* Checkbox
+  -------------------------- */
+    /* Radio
+  -------------------------- */
+    /* Select
+  -------------------------- */
+    /* Alert
+  -------------------------- */
+    /* Message Box
+  -------------------------- */
+    /* Message
+  -------------------------- */
+    /* Notification
+  -------------------------- */
+    /* Input
+  -------------------------- */
+    /* Cascader
+  -------------------------- */
+    /* Group
+  -------------------------- */
+    /* Tab
+  -------------------------- */
+    /* Button
+  -------------------------- */
+    /* cascader
+  -------------------------- */
+    /* Switch
+ -------------------------- */
+    /* Dialog
+ -------------------------- */
+    /* Table
+ -------------------------- */
+    /* Pagination
+ -------------------------- */
+    /* Popover
+ -------------------------- */
+    /* Tooltip
+  -------------------------- */
+    /* Tag
+  -------------------------- */
+    /* Dropdown
+  -------------------------- */
+    /* Badge
+  -------------------------- */
+    /* Card
+  --------------------------*/
+    /* Slider
+  --------------------------*/
+    /* Steps
+  --------------------------*/
+    /* Menu
+  --------------------------*/
+    /* Rate
+  --------------------------*/
+    /* DatePicker
+  --------------------------*/
+    /* Loading
+  --------------------------*/
+    /* Scrollbar
+  --------------------------*/
+    /* Carousel
+  --------------------------*/
+    /* Collapse
+  --------------------------*/
 }

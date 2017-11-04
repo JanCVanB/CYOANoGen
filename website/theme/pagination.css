@@ -93,6 +93,8 @@
   --------------------------*/
     /* Collapse
   --------------------------*/
+    /* Transfer
+  --------------------------*/
 }
 @charset "UTF-8";
 :root{
@@ -181,6 +183,8 @@
     /* Carousel
   --------------------------*/
     /* Collapse
+  --------------------------*/
+    /* Transfer
   --------------------------*/
 }
 .el-select-dropdown{
@@ -317,6 +321,8 @@
   --------------------------*/
     /* Collapse
   --------------------------*/
+    /* Transfer
+  --------------------------*/
 }
 .el-input{
     position: relative;
@@ -329,9 +335,6 @@
     border-color: rgb(209, 219, 229);
     color: #bbb;
     cursor: not-allowed;
-}
-.el-input.is-disabled .el-input__inner::-webkit-input-placeholder{
-    color: rgb(191, 203, 217);
 }
 .el-input.is-disabled .el-input__inner:-ms-input-placeholder{
     color: rgb(191, 203, 217);
@@ -353,7 +356,7 @@
     border: 1px solid rgb(191, 203, 217);
     box-sizing: border-box;
     color: rgb(31, 45, 61);
-    display: block;
+    display: inline-block;
     font-size: inherit;
     height: 36px;
     line-height: 1;
@@ -361,9 +364,6 @@
     padding: 3px 10px;
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
     width: 100%;
-}
-.el-input__inner::-webkit-input-placeholder{
-    color: rgb(151, 168, 190);
 }
 .el-input__inner:-ms-input-placeholder{
     color: rgb(151, 168, 190);
@@ -443,14 +443,14 @@
     border: 1px solid rgb(191, 203, 217);
     border-radius: 4px;
     padding: 0 10px;
-    width: 1%;
+    width: 1px;
     white-space: nowrap;
 }
 .el-input-group__append .el-select, .el-input-group__append .el-button, .el-input-group__prepend .el-select, .el-input-group__prepend .el-button{
     display: block;
     margin: -10px;
 }
-.el-input-group__append .el-button, .el-input-group__append .el-select .el-input__inner, .el-input-group__append .el-select:hover .el-input__inner, .el-input-group__prepend .el-button, .el-input-group__prepend .el-select .el-input__inner, .el-input-group__prepend .el-select:hover .el-input__inner{
+.el-input-group__append button.el-button, .el-input-group__append div.el-select .el-input__inner, .el-input-group__append div.el-select:hover .el-input__inner, .el-input-group__prepend button.el-button, .el-input-group__prepend div.el-select .el-input__inner, .el-input-group__prepend div.el-select:hover .el-input__inner{
     border-color: transparent;
     background-color: transparent;
     color: inherit;
@@ -489,9 +489,6 @@
     color: #bbb;
     cursor: not-allowed;
 }
-.el-textarea.is-disabled .el-textarea__inner::-webkit-input-placeholder{
-    color: rgb(191, 203, 217);
-}
 .el-textarea.is-disabled .el-textarea__inner:-ms-input-placeholder{
     color: rgb(191, 203, 217);
 }
@@ -512,9 +509,6 @@
     border: 1px solid rgb(191, 203, 217);
     border-radius: 4px;
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-}
-.el-textarea__inner::-webkit-input-placeholder{
-    color: rgb(151, 168, 190);
 }
 .el-textarea__inner:-ms-input-placeholder{
     color: rgb(151, 168, 190);
@@ -616,6 +610,8 @@
     /* Carousel
   --------------------------*/
     /* Collapse
+  --------------------------*/
+    /* Transfer
   --------------------------*/
 }
 .el-tag{
@@ -797,6 +793,8 @@
   --------------------------*/
     /* Collapse
   --------------------------*/
+    /* Transfer
+  --------------------------*/
 }
 .el-select-dropdown{}
 .el-select-dropdown__item{
@@ -812,7 +810,7 @@
     box-sizing: border-box;
     cursor: pointer;
 }
-.el-select-dropdown__item.hover{
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
     background-color: rgb(228, 232, 241);
 }
 .el-select-dropdown__item.selected{
@@ -919,6 +917,8 @@
     /* Carousel
   --------------------------*/
     /* Collapse
+  --------------------------*/
+    /* Transfer
   --------------------------*/
 }
 .el-select-group{
@@ -1028,6 +1028,8 @@
   --------------------------*/
     /* Collapse
   --------------------------*/
+    /* Transfer
+  --------------------------*/
 }
 .el-scrollbar{
     overflow: hidden;
@@ -1090,6 +1092,7 @@
 }
 .el-select .el-input__inner{
     cursor: pointer;
+    padding-right: 35px;
 }
 .el-select .el-input__inner:focus{
     border-color: #20a0ff;
@@ -1174,7 +1177,7 @@
     position: absolute;
     line-height: normal;
     white-space: normal;
-    z-index: 1000;
+    z-index: 1;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -1276,6 +1279,8 @@
     /* Carousel
   --------------------------*/
     /* Collapse
+  --------------------------*/
+    /* Transfer
   --------------------------*/
 }
 
@@ -1401,6 +1406,7 @@
     margin: 0 6px;
     box-sizing: border-box;
     transition: border .3s;
+    -moz-appearance: textfield;
 }
 
 .el-pagination__editor::-webkit-inner-spin-button, .el-pagination__editor::-webkit-outer-spin-button{
@@ -1474,4 +1480,92 @@
     background-color: #20a0ff;
     color: #fff;
     cursor: default;
+}
+:root{
+    /* Transition
+  -------------------------- */
+    /* Colors
+  -------------------------- */
+    /* Link
+  -------------------------- */
+    /* Border
+  -------------------------- */
+    /* Box-shadow
+  -------------------------- */
+    /* Fill
+  -------------------------- */
+    /* Font
+  -------------------------- */
+    /* Size
+  -------------------------- */
+    /* z-index
+  -------------------------- */
+    /* Disable base
+  -------------------------- */
+    /* Icon
+  -------------------------- */
+    /* Checkbox
+  -------------------------- */
+    /* Radio
+  -------------------------- */
+    /* Select
+  -------------------------- */
+    /* Alert
+  -------------------------- */
+    /* Message Box
+  -------------------------- */
+    /* Message
+  -------------------------- */
+    /* Notification
+  -------------------------- */
+    /* Input
+  -------------------------- */
+    /* Cascader
+  -------------------------- */
+    /* Group
+  -------------------------- */
+    /* Tab
+  -------------------------- */
+    /* Button
+  -------------------------- */
+    /* cascader
+  -------------------------- */
+    /* Switch
+ -------------------------- */
+    /* Dialog
+ -------------------------- */
+    /* Table
+ -------------------------- */
+    /* Pagination
+ -------------------------- */
+    /* Popover
+ -------------------------- */
+    /* Tooltip
+  -------------------------- */
+    /* Tag
+  -------------------------- */
+    /* Dropdown
+  -------------------------- */
+    /* Badge
+  -------------------------- */
+    /* Card
+  --------------------------*/
+    /* Slider
+  --------------------------*/
+    /* Steps
+  --------------------------*/
+    /* Menu
+  --------------------------*/
+    /* Rate
+  --------------------------*/
+    /* DatePicker
+  --------------------------*/
+    /* Loading
+  --------------------------*/
+    /* Scrollbar
+  --------------------------*/
+    /* Carousel
+  --------------------------*/
+    /* Collapse
+  --------------------------*/
 }
