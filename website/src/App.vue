@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    h2 Choose Your Own Adventure novel generator
+    h1 Choose Your Own Adventure novel generator
     p
       a(href='https://github.com/JanCVanB/CYOANoGen') Check out the source code on GitHub
     el-button.new-adventure(
@@ -23,7 +23,49 @@ import Adventure from './components/Adventure'
 const SCROLL_DURATION_MILLISECONDS = 3000
 
 const THE_SPOOKY_SCARY_SKELETON = {
-  title: 'The Spooky Scary Skeleton'
+  title: 'The Spooky Scary Skeleton',
+  pages: {
+    start: {
+      key: 'start',
+      text: 'Once upon a time, there was a skeleton who was both spooky and scary.',
+      options: [
+        { nextPage: '1', text: 'Be  spooked' },
+        { nextPage: '2', text: 'Be scared' }
+      ]
+    },
+    '1': {
+      key: '1',
+      text: 'The skeleton chuckles and doubles her spookiness.',
+      options: [
+        { nextPage: '1-1', text: 'Be 2 spooked' },
+        { nextPage: '1-2', text: 'Chuckle' }
+      ]
+    },
+    '1-1': {
+      key: '1-1',
+      text: 'You die from spookiness.'
+    },
+    '1-2': {
+      key: '1-2',
+      text: 'You successfully fooled the skeleton. Good job.'
+    },
+    '2': {
+      key: '2',
+      text: 'The skeleton apologizes and gives you a grapefruit.',
+      options: [
+        { nextPage: '2-1', text: 'Peel the grapefruit' },
+        { nextPage: '2-2', text: 'Question the grapefruit' }
+      ]
+    },
+    '2-1': {
+      key: '2-1',
+      text: 'It is a skeleton grapefruit. Good job.'
+    },
+    '2-2': {
+      key: '2-2',
+      text: 'You die from skepticism.'
+    }
+  }
 }
 
 export default {

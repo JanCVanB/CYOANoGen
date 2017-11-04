@@ -4,12 +4,15 @@
     transition-group(name='slide-fade')
       el-card.page(
         v-for='(page, pageIndex) in pages'
-        v-bind:key='pageIndex'
+        v-bind:key='page.key'
       )
-        p.text Once upon a time, there was a skeleton who was both spooky and scary.
-        .options
-          el-button.option(v-on:click='addPage') Do a spooky thing
-          el-button.option(v-on:click='addPage') Do a scary thing
+        p.text {{ page.text }}
+        .options(v-if='page.options')
+          el-button.option(
+            v-for='option in page.options'
+            v-on:click='handleOptionClick(pageIndex, option)'
+          )
+            | {{ option.text }}
 </template>
 
 <script>
@@ -31,14 +34,15 @@ export default {
 
   data () {
     return {
-      pages: [1]
+      pages: [this.adventure.pages.start]
     }
   },
 
   methods: {
 
-    addPage () {
-      this.pages.push(1)
+    handleOptionClick (pageIndex, option) {
+      const newPage = this.adventure.pages[option.nextPage]
+      this.pages.splice(pageIndex + 1, this.pages.length, newPage)
       setTimeout(() => {
         const lastPage = this.$el.querySelector('.page:last-child')
         this.$emit('scrollTo', lastPage)
@@ -53,16 +57,17 @@ export default {
 <style lang="sass" scoped>
 .adventure
   margin: 0 auto
-  width: 500px
+  width: 600px
 
 .page
   background-color: var(--color-lightest)
   margin: 10px 0
   padding: 10px 20px
   .text
-    margin: 10px 0 40px 0
+    margin: 10px 0
     text-align: left
   .options
+    margin-top: 40px
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
