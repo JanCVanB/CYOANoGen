@@ -10,6 +10,6 @@ I've posted my plan here https://github.com/NaNoGenMo/2017/issues/24, and I'll u
 ## TODO
 
 - ~Create an interface for interacting with an adventure~
-- Create a (minimal) hard-coded adventure
+- ~Create a (minimal) hard-coded adventure~
 - Create an interface for submitting adventure inputs
 - Create an engine for generating adventures from inputs

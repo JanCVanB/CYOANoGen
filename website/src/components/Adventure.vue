@@ -101,4 +101,6 @@ export default {
       -webkit-align-self: auto
       -ms-flex-item-align: auto
       align-self: auto
+      max-width: 40%
+      white-space: normal
 </style>
