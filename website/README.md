@@ -19,6 +19,15 @@ npm run build --report
 
 # regenerate Element component styles in theme/ from element-variables.css
 npm run theme
+
+# clean the build directory
+npm run clean
+
+# deploy the latest production build to GitHub pages
+npm run deploy
+
+# clean, build, and deploy
+npm run shipit
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
