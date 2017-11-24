@@ -3,12 +3,7 @@
     h1 Choose Your Own Adventure novel generator
     p
       a(href='https://github.com/JanCVanB/CYOANoGen') Check out the source code on GitHub
-    inputs
-    el-button.new-adventure(
-      v-bind:disabled='!!adventure'
-      v-on:click='adventure = onlyAdventureOption'
-    )
-      | {{ adventure ? 'Generate New Adventure' : 'Generate Adventure' }}
+    inputs(v-on:submit='generateAdventure')
     transition(name='slide-fade')
       adventure(
         v-if='adventure'
@@ -37,6 +32,10 @@ export default {
   },
 
   methods: {
+
+    generateAdventure (premise) {
+      this.adventure = this.onlyAdventureOption
+    },
 
     scrollTo (target) {
       smoothScroll(target, SCROLL_DURATION_MILLISECONDS, null, this.$el)
@@ -96,8 +95,8 @@ h1, h2, h3, h4, h5, h6
 </style>
 
 <style lang="sass" scoped>
-  .new-adventure,
-  .new-adventure:hover
-    background-color: transparent
-    margin: 20px 0
+.new-adventure,
+.new-adventure:hover
+  background-color: transparent
+  margin: 20px 0
 </style>
