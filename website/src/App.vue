@@ -3,6 +3,7 @@
     h1 Choose Your Own Adventure novel generator
     p
       a(href='https://github.com/JanCVanB/CYOANoGen') Check out the source code on GitHub
+    inputs
     el-button.new-adventure(
       v-bind:disabled='!!adventure'
       v-on:click='adventure = onlyAdventureOption'
@@ -19,6 +20,7 @@
 <script>
 import smoothScroll from 'smoothscroll'
 import Adventure from './components/Adventure'
+import Inputs from './components/Inputs'
 import theRainyDay from '../adventures/theRainyDay'
 
 const SCROLL_DURATION_MILLISECONDS = 3000
@@ -43,7 +45,8 @@ export default {
   },
 
   components: {
-    Adventure
+    Adventure,
+    Inputs
   }
 
 }

@@ -3,7 +3,7 @@ export default {
   pages: {
     start: {
       key: 'start',
-      text: 'You are a basketball player with a bike and some sunglasses at the beach. Suddenly, you notice that it is raining.',
+      text: 'You are a basketball player at the beach with a bike and some sunglasses. Suddenly, you notice that it is raining.',
       options: [
         { nextPage: '1', text: 'Use your bike' },
         { nextPage: '2', text: 'Use your sunglasses' }
