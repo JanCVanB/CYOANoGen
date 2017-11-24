@@ -1,0 +1,9 @@
+{
+  "name": "cyoanogen",
+  "version": "1.0.0",
+  "description": "Choose Your Own Adventure novel generator (for NaNoGenMo 2017)",
+  "main": "index.js",
+  "repository": "git@github.com:JanCVanB/CYOANoGen.git",
+  "author": "Jan Van Bruggen <jancvanbruggen@gmail.com>",
+  "license": "MIT"
+}
