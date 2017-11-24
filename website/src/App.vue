@@ -14,9 +14,11 @@
 
 <script>
 import smoothScroll from 'smoothscroll'
+
+import { generateAdventure } from '../../generateAdventure'
+
 import Adventure from './components/Adventure'
 import Inputs from './components/Inputs'
-import theRainyDay from '../adventures/theRainyDay'
 
 const SCROLL_DURATION_MILLISECONDS = 3000
 
@@ -26,15 +28,14 @@ export default {
 
   data () {
     return {
-      adventure: null,
-      onlyAdventureOption: theRainyDay
+      adventure: null
     }
   },
 
   methods: {
 
     generateAdventure (premise) {
-      this.adventure = this.onlyAdventureOption
+      this.adventure = generateAdventure(premise)
     },
 
     scrollTo (target) {
