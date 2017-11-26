@@ -4,20 +4,36 @@
     .premise
       .input
         | I am
-        el-input.input(v-model='premise.person' placeholder='Who are you?')
+        el-input.input(
+          v-model='premise.person'
+          placeholder='Who are you?'
+          v-on:keyup.enter.native='tryToSubmit'
+        )
       .input
         | at
-        el-input.input(v-model='premise.place' placeholder='Where are you?')
+        el-input.input(
+          v-model='premise.place'
+          placeholder='Where are you?'
+          v-on:keyup.enter.native='tryToSubmit'
+        )
       .input
         | with a
-        el-input.input(v-model='premise.thingSingular' placeholder='...')
+        el-input.input(
+          v-model='premise.thingSingular'
+          placeholder='...'
+          v-on:keyup.enter.native='tryToSubmit'
+        )
       .input
         | and some
-        el-input.input(v-model='premise.thingPlural' placeholder='...')
+        el-input.input(
+          v-model='premise.thingPlural'
+          placeholder='...'
+          v-on:keyup.enter.native='tryToSubmit'
+        )
         | .
     el-button.submit(
       v-bind:disabled='!canSubmit'
-      v-on:click='$emit("submit", premise)'
+      v-on:click='tryToSubmit'
     )
       | Generate adventure
 </template>
@@ -42,7 +58,23 @@ export default {
 
     canSubmit () {
       const { person, place, thingPlural, thingSingular } = this.premise
-      return person && place && thingPlural && thingSingular
+      return !!(person && place && thingPlural && thingSingular)
+    }
+
+  },
+
+  methods: {
+
+    submit () {
+      this.$emit('submit', this.premise)
+    },
+
+    tryToSubmit () {
+      console.log('checking')
+      if (this.canSubmit) {
+        console.log('we good')
+        this.submit()
+      }
     }
 
   }
