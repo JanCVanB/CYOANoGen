@@ -4,6 +4,8 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+const generateAdventurePath = path.join(__dirname, '..', '..', 'generateAdventure.js')
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -32,7 +34,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
+        include: [resolve('src'), resolve('test'), generateAdventurePath],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -45,7 +47,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'), resolve('test'), generateAdventurePath]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
